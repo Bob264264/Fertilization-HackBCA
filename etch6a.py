@@ -130,7 +130,6 @@ while not finishedGame:
                         ctDown()
                     break
             if areCirclesTouching(pt, goal):
-                win.getMouse()
                 win.close()
                 loser = False
                 break
@@ -151,7 +150,7 @@ while not finishedGame:
             time.sleep(2)
             win.close()
             win = GraphWin("Loser :/", MAX_X_SIZE, MAX_Y_SIZE)
-            mes = Text(Point(MAX_X_SIZE/2, MAX_Y_SIZE/2), "No Children For You!")
+            mes = Text(Point(MAX_X_SIZE/2, MAX_Y_SIZE/2), "You created " + str(roundNum-1) + " children!")
             mes.setSize(32)
             mes.draw(win)
             finishedGame = True
